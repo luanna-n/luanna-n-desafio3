@@ -1,0 +1,101 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  /*
+   *   Layout para Desktop
+   */
+
+  "header-layout.desktop": {
+    "children": ["sticky-layout#desktop"]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#desktop"]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": false,
+      "blockClass": "header"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "flex-layout.col#cart"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "horizontalAlign": "right",
+      "width": "10",
+      "blockClass": "logo-container"
+    },
+    "children": ["logo"]
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "horizontalAlign": "center",
+      "width": "grow"
+    },
+    "children": ["search-bar"]
+  },
+  "flex-layout.col#cart": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "10",
+      "blockClass": "cart-container"
+    },
+    "children": ["minicart.v2"]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      // "url": "https://hiringcoders2021.vtexassets.com/assets/vtex.file-manager-graphql/images/2268c146-1759-4f1b-acc1-cfc9b066ab56___2f7853b5b7e7dcb5b4ef8f4db6868e01.png",
+      "url": "/assets/upmedal.png",
+      "width": "80",
+      "blockClass": "logo-desktop"
+    }
+  },
+  /*
+   *   Layout para Mobile
+   */
+  "header-layout.mobile": {
+    "children": ["sticky-layout#mobile"]
+  },
+  "sticky-layout#mobile": {
+    "children": ["flex-layout.row#mobile"]
+  },
+  "flex-layout.row#mobile": {
+    "children": ["logo", "flex-layout.col#spacer", "minicart.v2"],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "search-bar": {
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "containerMode": "container"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": ["product-summary"]
+  }
+}

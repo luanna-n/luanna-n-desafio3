@@ -1,0 +1,25 @@
+.flexRow--header,
+.flexRowContent--main-header-mobile {
+  background-color: #212121;
+}
+.flexRowContent {
+  overflow: hidden;
+}
+.flexColChild {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexColChild--logo-container {
+  width: 10vw;
+}
+.flexColChild--cart-container {
+  width: 10vw;
+}
+.flexRow--home-scroll {
+  background-color: aqua;
+  justify-content: center;
+  /* height: 50vh; */
+}

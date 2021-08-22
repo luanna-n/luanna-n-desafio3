@@ -1,0 +1,173 @@
+{
+  "store.home": {
+    "blocks": ["responsive-layout.desktop", "responsive-layout.mobile"]
+  },
+  "responsive-layout.desktop": {
+    "children": ["flex-layout.row#home-desktop"]
+  },
+  "flex-layout.row#home-desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": true
+    },
+    "children": ["tab-layout#home"]
+  },
+
+  "tab-layout#home": {
+    "children": ["tab-list#home", "tab-content#home"]
+  },
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#home0",
+      "tab-list.item#home1",
+      "tab-list.item#home2",
+      "tab-list.item#home3"
+    ]
+  },
+  "tab-list.item#home0": {
+    "props": {
+      "tabId": "home",
+      "label": "HOME",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home1": {
+    "props": {
+      "tabId": "PROMO",
+      "label": "PROMOÇÃO"
+    }
+  },
+  "tab-list.item#home2": {
+    "props": {
+      "label": "Corinthians",
+      "tabId": "corinthians"
+    }
+  },
+  "tab-list.item#home3": {
+    "props": {
+      "label": "Palmeiras",
+      "tabId": "palmeiras"
+    }
+  },
+  "tab-content#home": {
+    "children": [
+      "slider-layout#home-banner",
+      "tab-content.item#home0",
+      "tab-content.item#home1",
+      "tab-content.item#home2",
+      "tab-content.item#home3"
+    ]
+  },
+  "tab-content.item#home0": {
+    "children": ["rich-text#home0"],
+    "props": {
+      "tabId": "home"
+    }
+  },
+  "tab-content.item#home1": {
+    "children": ["rich-text#home1"],
+    "props": {
+      "tabId": "PROMO"
+    }
+  },
+  "tab-content.item#home2": {
+    "children": ["rich-text#home2"],
+    "props": {
+      "tabId": "corinthians"
+    }
+  },
+  "tab-content.item#home3": {
+    "children": ["rich-text#home3"],
+    "props": {
+      "tabId": "palmeiras"
+    }
+  },
+  "rich-text#home0": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = HOME",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#home1": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = PROMO",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#home2": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = corinthians",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#home3": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = palmeiras",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+
+  "slider-layout#home-banner": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "fullWidth": false,
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": ["image#banner01", "image#banner02"]
+  },
+
+  "image#banner01": {
+    "props": {
+      "src": "assets/promo-banner01.jpg",
+      "maxHeight": "912",
+      "link": "/"
+    }
+  },
+  "image#banner02": {
+    "props": {
+      "src": "assets/promo-banner02.jpg",
+      "maxHeight": 912,
+      "link": "/"
+    }
+  },
+  /*
+   *   Layout Mobile
+   *   Tab Layout com efeito de Scroll Horizontal
+   */
+  "responsive-layout.mobile": {
+    "children": ["flex-layout.row#home-scroll"]
+  },
+  "flex-layout.row#home-scroll": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": true
+    },
+    "children": ["tab-layout#home-scroll"]
+  },
+  "tab-layout#home-scroll": {
+    "children": ["tab-list#home-scroll", "tab-content#home"]
+  },
+  "tab-list#home-scroll": {
+    "children": [
+      "tab-list.item#home0",
+      "tab-list.item#home1",
+      "tab-list.item#home2",
+      "tab-list.item#home3"
+    ],
+    "props": {
+      "blockClass": "home-scroll"
+    }
+  }
+}
